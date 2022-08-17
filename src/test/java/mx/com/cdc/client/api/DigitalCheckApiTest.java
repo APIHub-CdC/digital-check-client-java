@@ -57,11 +57,11 @@ public class DigitalCheckApiTest {
       
       Otorgante otorgante = new Otorgante();
       
-      otorgante.setFolioOtorgante("386636546");
-      otorgante.setFolioConsulta("386636538");
-	  otorgante.setEmail("ejemplo.ejemplo@gmail.com");
-	  otorgante.setIp("1103.4.96.66");
-	  otorgante.setPhone("525512345678");
+      otorgante.setFolioOtorgante("");
+      otorgante.setFolioConsulta("");
+	  otorgante.setEmail("");
+	  otorgante.setIp("");
+	  otorgante.setPhone("");
 	  
       try {
         Response response = api.fullfraud(xApiKey, username, password, otorgante);
