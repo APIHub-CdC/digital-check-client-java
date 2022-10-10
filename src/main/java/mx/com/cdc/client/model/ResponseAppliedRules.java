@@ -70,8 +70,8 @@ public class ResponseAppliedRules {
   }
   @SerializedName("operation")
   private OperationEnum operation = null;
-  @SerializedName("score")
-  private BigDecimal score = null;
+  @SerializedName("grade")
+  private BigDecimal grade = null;
   public ResponseAppliedRules id(String id) {
     this.id = id;
     return this;
@@ -108,17 +108,17 @@ public class ResponseAppliedRules {
   public void setOperation(OperationEnum operation) {
     this.operation = operation;
   }
-  public ResponseAppliedRules score(BigDecimal score) {
-    this.score = score;
+  public ResponseAppliedRules grade(BigDecimal grade) {
+    this.grade = grade;
     return this;
   }
    
-  @ApiModelProperty(example = "2.0", value = "Score de la regla.")
-  public BigDecimal getScore() {
-    return score;
+  @ApiModelProperty(example = "2.0", value = "Grade de la regla.")
+  public BigDecimal getGrade() {
+    return grade;
   }
-  public void setScore(BigDecimal score) {
-    this.score = score;
+  public void setGrade(BigDecimal grade) {
+    this.grade = grade;
   }
   @Override
   public boolean equals(java.lang.Object o) {
@@ -132,11 +132,11 @@ public class ResponseAppliedRules {
     return Objects.equals(this.id, responseAppliedRules.id) &&
         Objects.equals(this.name, responseAppliedRules.name) &&
         Objects.equals(this.operation, responseAppliedRules.operation) &&
-        Objects.equals(this.score, responseAppliedRules.score);
+        Objects.equals(this.grade, responseAppliedRules.grade);
   }
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, operation, score);
+    return Objects.hash(id, name, operation, grade);
   }
   @Override
   public String toString() {
@@ -146,7 +146,7 @@ public class ResponseAppliedRules {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    operation: ").append(toIndentedString(operation)).append("\n");
-    sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    grade: ").append(toIndentedString(grade)).append("\n");
     sb.append("}");
     return sb.toString();
   }
