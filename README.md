@@ -148,8 +148,8 @@ key_password=your_super_secure_password
 En el archivo ***DigitalCheckApiTest.java***, que se encuentra en ***src/test/java/mx/com/cdc/client/api***. Se deberá modificar los datos de la petición y los datos de consumo:
 
 1. Configurar ubicación y acceso de la llave creado en el **paso 1** y el certificado descargado en el **paso 2**
-   - keystoreFile: ubicacion del archivo keystore.jks
-   - cdcCertFile: ubicacion del archivo cdc_cert.pem
+   - keystoreFile: ubicación del archivo keystore.jks
+   - cdcCertFile: ubicación del archivo cdc_cert.pem
    - keystorePassword: contraseña de cifrado del keystore
    - keyAlias: alias asignado al keystore
    - keyPassword: contraseña de cifrado del contenedor
