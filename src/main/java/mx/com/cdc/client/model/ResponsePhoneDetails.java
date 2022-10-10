@@ -82,8 +82,8 @@ public class ResponsePhoneDetails {
   private String country = null;
   @SerializedName("carrier")
   private String carrier = null;
-  @SerializedName("score")
-  private BigDecimal score = null;
+  @SerializedName("grade")
+  private BigDecimal grade = null;
   @SerializedName("account_details")
   private ResponsePhAccountDetails accountDetails = null;
   public ResponsePhoneDetails number(Integer number) {
@@ -146,17 +146,17 @@ public class ResponsePhoneDetails {
   public void setCarrier(String carrier) {
     this.carrier = carrier;
   }
-  public ResponsePhoneDetails score(BigDecimal score) {
-    this.score = score;
+  public ResponsePhoneDetails grade(BigDecimal grade) {
+    this.grade = grade;
     return this;
   }
    
-  @ApiModelProperty(example = "15.0", value = "Score de 0 a 100 que indica la probabilidad de que el número telefónico sea fraudulento.")
-  public BigDecimal getScore() {
-    return score;
+  @ApiModelProperty(example = "15.0", value = "Grade de 0 a 100 que indica la probabilidad de que el número telefónico sea fraudulento.")
+  public BigDecimal getGrade() {
+    return grade;
   }
-  public void setScore(BigDecimal score) {
-    this.score = score;
+  public void setGrade(BigDecimal grade) {
+    this.grade = grade;
   }
   public ResponsePhoneDetails accountDetails(ResponsePhAccountDetails accountDetails) {
     this.accountDetails = accountDetails;
@@ -184,12 +184,12 @@ public class ResponsePhoneDetails {
         Objects.equals(this.type, responsePhoneDetails.type) &&
         Objects.equals(this.country, responsePhoneDetails.country) &&
         Objects.equals(this.carrier, responsePhoneDetails.carrier) &&
-        Objects.equals(this.score, responsePhoneDetails.score) &&
+        Objects.equals(this.grade, responsePhoneDetails.grade) &&
         Objects.equals(this.accountDetails, responsePhoneDetails.accountDetails);
   }
   @Override
   public int hashCode() {
-    return Objects.hash(number, valid, type, country, carrier, score, accountDetails);
+    return Objects.hash(number, valid, type, country, carrier, grade, accountDetails);
   }
   @Override
   public String toString() {
@@ -201,7 +201,7 @@ public class ResponsePhoneDetails {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    carrier: ").append(toIndentedString(carrier)).append("\n");
-    sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    grade: ").append(toIndentedString(grade)).append("\n");
     sb.append("    accountDetails: ").append(toIndentedString(accountDetails)).append("\n");
     sb.append("}");
     return sb.toString();

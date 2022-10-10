@@ -64,8 +64,8 @@ public class ResponseData {
   }
   @SerializedName("state")
   private StateEnum state = null;
-  @SerializedName("fraud_score")
-  private BigDecimal fraudScore = null;
+  @SerializedName("fraud_grade")
+  private BigDecimal fraudGrade = null;
   @SerializedName("version")
   private String version = null;
   @SerializedName("applied_rules")
@@ -100,17 +100,17 @@ public class ResponseData {
   public void setState(StateEnum state) {
     this.state = state;
   }
-  public ResponseData fraudScore(BigDecimal fraudScore) {
-    this.fraudScore = fraudScore;
+  public ResponseData fraudGrade(BigDecimal fraudGrade) {
+    this.fraudGrade = fraudGrade;
     return this;
   }
    
-  @ApiModelProperty(example = "90.0", value = "\"Score que indica la probabilidad de que una transacción sea fraudulenta. Mín: 0, Máx: 999\"")
-  public BigDecimal getFraudScore() {
-    return fraudScore;
+  @ApiModelProperty(example = "90.0", value = "\"Grade que indica la probabilidad de que una transacción sea fraudulenta. Mín: 0, Máx: 999\"")
+  public BigDecimal getFraudGrade() {
+    return fraudGrade;
   }
-  public void setFraudScore(BigDecimal fraudScore) {
-    this.fraudScore = fraudScore;
+  public void setFraudGrade(BigDecimal fraudGrade) {
+    this.fraudGrade = fraudGrade;
   }
   public ResponseData version(String version) {
     this.version = version;
@@ -190,7 +190,7 @@ public class ResponseData {
     ResponseData responseData = (ResponseData) o;
     return Objects.equals(this.id, responseData.id) &&
         Objects.equals(this.state, responseData.state) &&
-        Objects.equals(this.fraudScore, responseData.fraudScore) &&
+        Objects.equals(this.fraudGrade, responseData.fraudGrade) &&
         Objects.equals(this.version, responseData.version) &&
         Objects.equals(this.appliedRules, responseData.appliedRules) &&
         Objects.equals(this.ipDetails, responseData.ipDetails) &&
@@ -199,7 +199,7 @@ public class ResponseData {
   }
   @Override
   public int hashCode() {
-    return Objects.hash(id, state, fraudScore, version, appliedRules, ipDetails, emailDetails, phoneDetails);
+    return Objects.hash(id, state, fraudGrade, version, appliedRules, ipDetails, emailDetails, phoneDetails);
   }
   @Override
   public String toString() {
@@ -208,7 +208,7 @@ public class ResponseData {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    fraudScore: ").append(toIndentedString(fraudScore)).append("\n");
+    sb.append("    fraudGrade: ").append(toIndentedString(fraudGrade)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    appliedRules: ").append(toIndentedString(appliedRules)).append("\n");
     sb.append("    ipDetails: ").append(toIndentedString(ipDetails)).append("\n");

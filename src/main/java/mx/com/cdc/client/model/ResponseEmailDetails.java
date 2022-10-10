@@ -20,8 +20,8 @@ import java.io.IOException;
 public class ResponseEmailDetails {
   @SerializedName("email")
   private String email = null;
-  @SerializedName("score")
-  private String score = null;
+  @SerializedName("grade")
+  private String grade = null;
   @SerializedName("deliverable")
   private Boolean deliverable = null;
   @SerializedName("domain_details")
@@ -42,17 +42,17 @@ public class ResponseEmailDetails {
   public void setEmail(String email) {
     this.email = email;
   }
-  public ResponseEmailDetails score(String score) {
-    this.score = score;
+  public ResponseEmailDetails grade(String grade) {
+    this.grade = grade;
     return this;
   }
    
   @ApiModelProperty(example = "1.2", value = "Puntuación del 0 al 100 que indica la probabilidad de que el correo electrónico del usuario es fraudulento.")
-  public String getScore() {
-    return score;
+  public String getGrade() {
+    return grade;
   }
-  public void setScore(String score) {
-    this.score = score;
+  public void setGrade(String grade) {
+    this.grade = grade;
   }
   public ResponseEmailDetails deliverable(Boolean deliverable) {
     this.deliverable = deliverable;
@@ -112,7 +112,7 @@ public class ResponseEmailDetails {
     }
     ResponseEmailDetails responseEmailDetails = (ResponseEmailDetails) o;
     return Objects.equals(this.email, responseEmailDetails.email) &&
-        Objects.equals(this.score, responseEmailDetails.score) &&
+        Objects.equals(this.grade, responseEmailDetails.grade) &&
         Objects.equals(this.deliverable, responseEmailDetails.deliverable) &&
         Objects.equals(this.domainDetails, responseEmailDetails.domainDetails) &&
         Objects.equals(this.accountDetails, responseEmailDetails.accountDetails) &&
@@ -120,7 +120,7 @@ public class ResponseEmailDetails {
   }
   @Override
   public int hashCode() {
-    return Objects.hash(email, score, deliverable, domainDetails, accountDetails, breachDetails);
+    return Objects.hash(email, grade, deliverable, domainDetails, accountDetails, breachDetails);
   }
   @Override
   public String toString() {
@@ -128,7 +128,7 @@ public class ResponseEmailDetails {
     sb.append("class ResponseEmailDetails {\n");
     
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    grade: ").append(toIndentedString(grade)).append("\n");
     sb.append("    deliverable: ").append(toIndentedString(deliverable)).append("\n");
     sb.append("    domainDetails: ").append(toIndentedString(domainDetails)).append("\n");
     sb.append("    accountDetails: ").append(toIndentedString(accountDetails)).append("\n");

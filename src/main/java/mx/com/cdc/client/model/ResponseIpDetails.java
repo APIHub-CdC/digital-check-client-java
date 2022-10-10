@@ -19,8 +19,8 @@ import java.util.List;
 public class ResponseIpDetails {
   @SerializedName("ip")
   private String ip = null;
-  @SerializedName("score")
-  private BigDecimal score = null;
+  @SerializedName("grade")
+  private BigDecimal grade = null;
   @SerializedName("country")
   private String country = null;
   @SerializedName("state_prov")
@@ -122,17 +122,17 @@ public class ResponseIpDetails {
   public void setIp(String ip) {
     this.ip = ip;
   }
-  public ResponseIpDetails score(BigDecimal score) {
-    this.score = score;
+  public ResponseIpDetails grade(BigDecimal grade) {
+    this.grade = grade;
     return this;
   }
    
   @ApiModelProperty(example = "5.0", value = "Puntuación de 0 a 100 que indica la probabilidad de que la dirección IP del usuario sea fraudulenta.")
-  public BigDecimal getScore() {
-    return score;
+  public BigDecimal getGrade() {
+    return grade;
   }
-  public void setScore(BigDecimal score) {
-    this.score = score;
+  public void setGrade(BigDecimal grade) {
+    this.grade = grade;
   }
   public ResponseIpDetails country(String country) {
     this.country = country;
@@ -350,7 +350,7 @@ public class ResponseIpDetails {
     }
     ResponseIpDetails responseIpDetails = (ResponseIpDetails) o;
     return Objects.equals(this.ip, responseIpDetails.ip) &&
-        Objects.equals(this.score, responseIpDetails.score) &&
+        Objects.equals(this.grade, responseIpDetails.grade) &&
         Objects.equals(this.country, responseIpDetails.country) &&
         Objects.equals(this.stateProv, responseIpDetails.stateProv) &&
         Objects.equals(this.city, responseIpDetails.city) &&
@@ -370,7 +370,7 @@ public class ResponseIpDetails {
   }
   @Override
   public int hashCode() {
-    return Objects.hash(ip, score, country, stateProv, city, timezoneOffset, ispName, latitude, longitude, type, openPorts, tor, harmful, vpn, webProxy, publicProxy, spamNumber, spamUrls);
+    return Objects.hash(ip, grade, country, stateProv, city, timezoneOffset, ispName, latitude, longitude, type, openPorts, tor, harmful, vpn, webProxy, publicProxy, spamNumber, spamUrls);
   }
   @Override
   public String toString() {
@@ -378,7 +378,7 @@ public class ResponseIpDetails {
     sb.append("class ResponseIpDetails {\n");
     
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
-    sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    grade: ").append(toIndentedString(grade)).append("\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    stateProv: ").append(toIndentedString(stateProv)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
